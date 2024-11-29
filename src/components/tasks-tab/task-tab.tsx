@@ -7,27 +7,20 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card"
-import { Input } from "@/components/ui/input"
-import { Label } from "@/components/ui/label"
-import {
-  Select,
-  SelectContent,
-  SelectItem,
-  SelectTrigger,
-  SelectValue,
-} from "@/components/ui/select"
+interface Task_TabProps {
+  className?: string;
+}
 
-
-export default function Task_Tab() {
+export default function Task_Tab({ className }: Task_TabProps) {
     return (
       
-      <Card className="w-[350px] mx-9 my-10">
+      <Card className={`min-w-[350px] ${className}`}>
         <CardHeader>
           <CardTitle><p className="text-3xl">Tasks</p></CardTitle>
-          <CardDescription>press ctrl + "." to add new task</CardDescription>
+          <CardDescription>press ctrl + to add new task</CardDescription>
         </CardHeader>
         <CardContent>
-            
+            {/*do not add anything here  */}
         </CardContent>
       </Card>
     )
