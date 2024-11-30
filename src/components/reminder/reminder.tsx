@@ -15,10 +15,10 @@ export default function Reminder({ className }: Task_TabProps){
     return <>
     <Card className={`${className}`}>
       <CardHeader>
-        <CardTitle>reminder</CardTitle>
+        <CardTitle className="text-2xl">Reminder</CardTitle>
       </CardHeader>
       <CardContent>
-      <p>hello</p>
+    
       </CardContent>
     </Card>
     </>

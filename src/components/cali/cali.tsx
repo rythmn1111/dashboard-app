@@ -15,17 +15,17 @@ interface Task_TabProps {
   
 export default function Cali({ className }: Task_TabProps){
     return <>
-     <Card className={`${className}`}>
+     <Card className={`${className} flex flex-col`}>
       <CardHeader>
-        <CardTitle>Calendar</CardTitle>
+        <CardTitle className="text-2xl">Calendar</CardTitle>
       </CardHeader>
-      <CardContent>
+      <CardContent className="h-full min-h-[350px]">
       <iframe
           src="https://calendar.google.com/calendar/embed?src=rythmnmagnani0%40gmail.com&ctz=Asia%2FKolkata"
           style={{ 
             border: 0, 
-            width: '100%', 
-            height: '600px' 
+            width: '100%',
+            height:'100%'  
           }}
           frameBorder="0"
           scrolling="no"

@@ -14,10 +14,10 @@ interface Task_TabProps {
 export default function Task_Tab({ className }: Task_TabProps) {
     return (
       
-      <Card className={`min-w-[350px] ${className}`}>
+      <Card className={`${className}`}>
         <CardHeader>
           <CardTitle><p className="text-3xl">Tasks</p></CardTitle>
-          <CardDescription>press ctrl + to add new task</CardDescription>
+          
         </CardHeader>
         <CardContent>
             {/*do not add anything here  */}
