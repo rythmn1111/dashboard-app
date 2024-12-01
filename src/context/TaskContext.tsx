@@ -7,7 +7,7 @@ import React, {
   } from 'react';
   import { supabase } from "../../utils/supabase";
   // Define the Tables type
-  type Tables<T extends string> = {
+  type Tables = {
     id: number;
     'task-name': string;
     'task-complition': boolean;
@@ -16,10 +16,10 @@ import React, {
 
   // Create the context type
   type TaskContextType = {
-    tasks: Tables<'tasks'>[];
+    tasks: Tables[];
     addTask: (taskName: string) => Promise<void>;
     deleteTask: (taskId: number) => Promise<void>;
-    updateTaskCompletion: (task: Tables<'tasks'>) => Promise<void>;
+    updateTaskCompletion: (task: Tables) => Promise<void>;
     loading: boolean;
     error: string | null;
   };
@@ -29,7 +29,7 @@ import React, {
   
   // Provider component
   export const TaskProvider: React.FC<{ children: ReactNode }> = ({ children }) => {
-    const [tasks, setTasks] = useState<Tables<'tasks'>[]>([]);
+    const [tasks, setTasks] = useState<Tables[]>([]);
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState<string | null>(null);
   
@@ -98,7 +98,7 @@ import React, {
     };
   
     // Update task completion status
-    const updateTaskCompletion = async (task: Tables<'tasks'>) => {
+    const updateTaskCompletion = async (task: Tables) => {
       try {
         const { error } = await supabase
           .from('tasks')
