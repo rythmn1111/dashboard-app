@@ -78,6 +78,14 @@ export default function Terminal() {
     }
   }
 
+  // New handler for key press events in the task dialog
+  const handleKeyDown = (e: React.KeyboardEvent<HTMLInputElement>) => {
+    if (e.key === 'Enter' && !isLoading) {
+      e.preventDefault()
+      handleCreateTask()
+    }
+  }
+
   return (
     <>
       <CommandDialog open={commandOpen} onOpenChange={setCommandOpen}>
@@ -121,6 +129,7 @@ export default function Terminal() {
                 placeholder="Enter task name" 
                 value={taskName}
                 onChange={(e) => setTaskName(e.target.value)}
+                onKeyDown={handleKeyDown} // Add key down event handler
               />
               {error && (
                 <p className="text-red-500 text-sm">{error}</p>
