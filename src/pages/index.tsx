@@ -9,7 +9,8 @@ export default function Home() {
   <div className="h-screen mx-auto md:w-11/12">
     <div className="flex md:flex-row flex-col h-full w-full gap-3 p-5">
       <div className=" w-full lg:w-1/2 grid grid-rows-2 gap-3">
-      <Task_Tab />
+      <Task_Tab className="overflow-scroll overflow-x-hidden [&::-webkit-scrollbar]:[width:3  px]
+            [&::-webkit-scrollbar-thumb]:bg-white" />
       <Reminder />  
       </div>
       <div className="grid w-full  row-span-2"><Cali /></div>
