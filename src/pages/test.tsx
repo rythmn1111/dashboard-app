@@ -10,7 +10,7 @@ export default function DisplayPage() {
   const [startIndex, setStartIndex] = useState(0);
 
   const fetchNumbers = async () => {
-    const { data, error } = await supabase
+    const { data } = await supabase
       .from('students')
       .select('en_number')
       .range(startIndex, startIndex + 3)
