@@ -42,7 +42,7 @@ export default function DisplayPage() {
 
   return (
     <div className="min-h-screen flex flex-col items-center justify-center bg-black text-white">
-      <h1 className="text-3xl font-bold mb-8">CN VIVA!!!!!!!!</h1>
+      <h1 className="text-3xl font-bold mb-8">CPDP VIVA!!!!!!!!</h1>
       <h1 className="text-3xl font-bold mb-8">Next Students Go To Lab</h1>
       <div className="grid grid-cols-2 gap-4 mb-8">
         {currentNumbers.map((number, index) => (
