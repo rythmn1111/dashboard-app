@@ -22,7 +22,7 @@ export default function DisplayPage() {
   };
 
   const handleNext = () => {
-    setStartIndex(prev => prev + 4);
+    setStartIndex(prev => prev + 5);
   };
 
   useEffect(() => {
