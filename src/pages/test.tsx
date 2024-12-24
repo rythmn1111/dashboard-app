@@ -13,7 +13,7 @@ export default function DisplayPage() {
     const { data } = await supabase
       .from('students')
       .select('en_number')
-      .range(startIndex, startIndex + 3)
+      .range(startIndex, startIndex + 4)
       .order('id', { ascending: true });
 
     if (data) {
